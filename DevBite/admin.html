@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBite | Painel Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+    <div class="logo">
+      <h1>Dev<span>Bite</span> [Admin]</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html" class="active" id="nav-dashboard">Dashboard</a></li>
+        <li><a href="#cadastro" id="nav-cadastrar">Cadastrar Produto</a></li>
+        <li><a href="#pedidos" id="nav-pedidos">Pedidos Recentes</a></li>
+        <li><a href="index.html" id="nav-voltar-loja">Voltar à Loja</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Formulário de Cadastro -->
+    <section class="form-box" id="cadastro" style="margin-bottom: 3rem;">
+      <h2>Cadastrar Novo Produto</h2>
+      <br>
+      <form id="form-cadastrar-produto" action="#" method="POST">
+        <div class="form-group">
+          <label for="prod-nome">Nome do Produto</label>
+          <input type="text" id="prod-nome" name="nome" placeholder="Ex: Algorithm Burger" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prod-categoria">Categoria</label>
+          <select id="prod-categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option value="burgers">Burgers</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="sobremesas">Sobremesas</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="prod-preco">Preço (R$)</label>
+          <input type="number" id="prod-preco" name="preco" step="0.01" placeholder="35.00" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prod-imagem">URL da Imagem</label>
+          <input type="url" id="prod-imagem" name="imagem" placeholder="https://exemplo.com/imagem.jpg" required>
+        </div>
+
+        <div class="form-group">
+          <label for="prod-descricao">Descrição</label>
+          <textarea id="prod-descricao" name="descricao" rows="3" placeholder="Ingredientes e detalhes..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btn-salvar-produto">Salvar Produto</button>
+      </form>
+    </section>
+
+    <!-- Tabela de Pedidos Recentes -->
+    <section id="pedidos">
+      <h2>Pedidos Recentes</h2>
+      <br>
+      <div class="tabela-container">
+        <table id="tabela-pedidos-admin">
+          <thead>
+            <tr>
+              <th>#ID</th>
+              <th>Cliente</th>
+              <th>Itens</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1003</td>
+              <td>Alan Turing</td>
+              <td>1x Full-Stack Burger, 1x 404 Cola</td>
+              <td>R$ 46,40</td>
+              <td><span class="badge-status status-preparo" id="status-1003">Em Preparo</span></td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>Margaret Hamilton</td>
+              <td>2x Bug-Free Chicken, 2x Git Push Juice</td>
+              <td>R$ 87,00</td>
+              <td><span class="badge-status status-entrega" id="status-1002">Saiu p/ Entrega</span></td>
+            </tr>
+            <tr>
+              <td>#1001</td>
+              <td>Linus Torvalds</td>
+              <td>1x Veggie Syntax, 1x Shake</td>
+              <td>R$ 56,00</td>
+              <td><span class="badge-status status-concluido" id="status-1001">Concluído</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DevBite Lanchonete Tech. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

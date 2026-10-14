@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBote | Cardápio Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class = "logo">
+            <h1>Dev<span>Bite</span>_</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class = "active" id = "nav-cardapio">Cardápio</a></li>
+                
+                <li>
+                    <a href="checkout.html" id="nav-carrinho">
+                        Meu Carrinho <span class = "badge-carrinho" id = "carrinho-contador"></span>
+                    </a>
+                </li>
+
+                <li><a href = "admin.html" id = "nav-admin">Área Restrita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <!-- Categorias -->
+        <section  class = "categorias">
+            <button class = "btn-categoria active" id = "btn-cat-todos">Todos</button>
+            <button class = "btn-categoria" id = "btn-cat-burguers">Burguers</button>
+            <button class = "btn-categoria" id = "btn-cat-bebidas">Bebidas</button>
+            <button class = "btn-categoria" id = "btn-cat-sobremesas">Sobremesas</button>
+        </section>
+
+        <!-- Vitrine de Produtos -->
+          <section>
+            <div class = "grid-produtos">
+
+                <!-- Produto 1 -->
+                 <article class = "card-produto">
+                    <img src="./images/hamburguer.jpg" alt="Full-Stack Burguer">
+                    <div class = "card-body">
+                        <h3>Full-Stack Burguer</h3>
+                        <p>Pão brioche, 2x hamburguer de 160g, cheddar duplo, bacon cocrante e molho secreto.</p>
+                        <div class-footer>
+                            <span class = "preco">R$ 38,90</span>
+                            <button class = "btn btn-primary btn-adicionar" id = "btn-add-1" data-id = "1">Adicionar</button>
+                        </div>
+                    </div>
+                 </article>
+
+                 <!-- Produto 2 -->
+                  <article class = "card-produto">
+                    <img src="./images/frango frito.jpg" alt="Free Chicken">
+                    <div class = "card-body">
+                        <h3>Bug-Free Chicken</h3>
+                        <p>Frango empanado super crocante, queijo prato, alface americana e maionese temperada.</p>
+                        <div class = "card-footer">
+                            <span class = "preco">R$ 32,50</span>
+                            <button class = "btn btn-primary btn-adicionar" id = "btn-add-2" data-id = "2">Adicionar</button>
+                        </div>                    
+                    </div>
+                  </article>
+
+                  <!-- Produto 3 -->
+                   <article class="card-produto">
+                    <img src="./images/hamburguer vegano.jpg" alt="Veggie Syntax">
+                    <div class="card-body">
+                        <h3>Veggie Syntax</h3>
+                        <p>Hambúrguer de grão de bico, queijo vegano, tomate grelhado e rúcula no pão australiano.</p>
+                        <div class="card-footer">
+                            <span class="preco">R$ 34,00</span>
+                            <button class="btn btn-primary btn-adicionar" id="btn-add-3" data-id="3">Adicionar</button>
+                        </div>
+                    </div>
+                    </article>
+
+                <!-- Produto 4 -->
+                <article class="card-produto">
+                <img src="./images/coca cola.jpg" alt="404 Soda Not Found">
+                <div class="card-body">
+                    <h3>404 Cola Not Found</h3>
+                    <p>Lata de refrigerante cola trincando de gelada 350ml.</p>
+                    <div class="card-footer">
+                        <span class="preco">R$ 7,50</span>
+                        <button class="btn btn-primary btn-adicionar" id="btn-add-4" data-id="4">Adicionar</button>
+                    </div>
+                </div>
+                </article>
+
+                <!-- Produto 5 -->
+                <article class="card-produto">
+                <img src="./images/bebidas.jpg" alt="Git Push Juice">
+                <div class="card-body">
+                    <h3>Git Push Juice</h3>
+                    <p>Suco natural bem refrescante 500ml.</p>
+                    <div class="card-footer">
+                        <span class="preco">R$ 11,00</span>
+                        <button class="btn btn-primary btn-adicionar" id="btn-add-5" data-id="5">Adicionar</button>
+                    </div>
+                </div>
+                </article>
+
+                <!-- Produto 6 -->
+                <article class="card-produto">
+                    <img src="./images/milkshake.jpg" alt="Stack Overflow Shake">
+                    <div class="card-body">
+                        <h3>Stack Overflow Shake</h3>
+                        <p>Milkshake cremoso de Nutella com pedaços de brownie e chantilly extra.</p>
+                        <div class="card-footer">
+                            <span class="preco">R$ 22,00</span>
+                            <button class="btn btn-primary btn-adicionar" id="btn-add-6" data-id="6">Adicionar</button>
+                        </div>
+                    </div>
+                </article>     
+                
+                <!-- Produto 7 -->
+                 <article class="card-produto">
+                    <img src="./images/brownie.jpg" alt="Brownie Brown Color">
+                    <div class="card-body">
+                        <h3>Brownie Brown Color</h3>
+                        <p>Delicioso brownie macio acompanhado de sorvete de baunilha e calda de chocolate.</p>
+                        <div class="card-footer">
+                            <span class="preco">R$ 22,00</span>
+                            <button class="btn btn-primary btn-adicionar" id="btn-add-7" data-id="7">Adicionar</button>
+                        </div>
+                    </div>
+                </article> 
+
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

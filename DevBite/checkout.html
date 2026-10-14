@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBite | Finalizar Pedido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+      <h1>Dev<span>Bite</span>_</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="nav-cardapio">Cardápio</a></li>
+        <li><a href="checkout.html" class="active" id="nav-carrinho">Meu Carrinho <span class="badge-carrinho" id="carrinho-contador">2</span></a></li>
+        <li><a href="admin.html" id="nav-admin">Área Restrita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+    <h2>Seu Carrinho & Entrega</h2>
+    <br>
+
+    <div class="checkout-grid">
+        
+      <!-- Seção do Carrinho -->
+      <section>
+        <div class="tabela-container">
+          <table id="tabela-carrinho">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Qtd</th>
+                <th>Subtotal</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="item-carrinho-1">
+                <td>Full-Stack Burger</td>
+                <td>R$ 38,90</td>
+                <td>1</td>
+                <td>R$ 38,90</td>
+                <td><button class="btn btn-danger" id="btn-remover-1" data-id="1">X</button></td>
+              </tr>
+              <tr id="item-carrinho-6">
+                <td>Stack Overflow Shake</td>
+                <td>R$ 22,00</td>
+                <td>1</td>
+                <td>R$ 22,00</td>
+                <td><button class="btn btn-danger" id="btn-remover-6" data-id="6">X</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Total do Pedido</td>
+                <td colspan="2" id="valor-total-pedido">R$ 60,90</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Formulário de Finalização -->
+      <section class="form-box">
+        <h3>Dados para Entrega</h3>
+        <br>
+        <form id="form-checkout" action="#" method="POST">
+          <div class="form-group">
+            <label for="cliente-nome">Nome Completo</label>
+            <input type="text" id="cliente-nome" name="nome" placeholder="Ex: Ada Lovelace" required>
+          </div>
+
+          <div class="form-group">
+            <label for="cliente-endereco">Endereço Completo</label>
+            <input type="text" id="cliente-endereco" name="endereco" placeholder="Rua, Nº, Bairro, Compl." required>
+          </div>
+
+          <div class="form-group">
+            <label for="cliente-telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="cliente-telefone" name="telefone" placeholder="(11) 99999-9999" required>
+          </div>
+
+          <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <div class="radio-group">
+              <label for="pag-pix">
+                <input type="radio" id="pag-pix" name="pagamento" value="pix" checked> Pix
+              </label>
+              <label for="pag-cartao">
+                <input type="radio" id="pag-cartao" name="pagamento" value="cartao"> Cartão
+              </label>
+              <label for="pag-dinheiro">
+                <input type="radio" id="pag-dinheiro" name="pagamento" value="dinheiro"> Dinheiro
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary" id="btn-finalizar-pedido" style="width: 100%;">
+            Confirmar e Enviar Pedido
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DevBite Lanchonete Tech. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
